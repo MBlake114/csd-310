@@ -67,6 +67,9 @@ mac = students.find_one({"student_id": "1010"})
 #output the document to terminal window
 print("\n  Student ID: " + mac["student_id"] + "\n  First Name: " + mac["first_name"] + "\n  Last Name: " + mac["last_name"] + "\n")
 
+# call the delete_one method to remove the student_test_doc
+deleted_mac = students.delete_one({"student_id": "1010"})
+
 # find all students in the collection 
 student_list = students.find({})
 
